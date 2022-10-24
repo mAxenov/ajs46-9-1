@@ -1,7 +1,12 @@
 import Daemon from '../daemon';
 
-test('Тест класса Daemon', () => {
-  const received = new Daemon('Maxim');
+const received = new Daemon('Maxim');
+test('Тест класса Daemon attack', () => {
   received.attacks = 2;
-  expect(received.attacks).toBe(67);
+  expect(received.attacks).toBe(72);
+});
+
+test('Тест класса Daemon stoned', () => {
+  received.stoned = 2;
+  expect(received.stoned).toBe(67);
 });
